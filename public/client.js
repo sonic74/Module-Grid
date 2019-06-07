@@ -22,6 +22,39 @@ COBI.hub.externalInterfaceAction.subscribe(function(action) {
 // Display detailled item names if touch interaction is allowed
 COBI.app.touchInteractionEnabled.subscribe(function(touchInteractionEnabled) {
   updateInterfaceVisibility(touchInteractionEnabled);
+
+
+  console.log("touchInteractionEnabled="+touchInteractionEnabled);
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+//      transfer=true;
+      console.log('XMLHttpRequest.DONE');
+//      if(keys.length>0)keypressHandler();
+    }
+  }
+//  var url=document.URL+'?key='+encodeURIComponent(keys);
+//192.168.30.11 - - [15/Feb/2019:15:43:10 +0100] "GET /COBI.Bike/Module-Grid/?key=false HTTP/1.1" 200 649 "http://sven.killig.de/COBI.Bike/Module-Grid/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36"
+  var url=document.URL+'?batteryLevel='+encodeURIComponent(batteryLevel);
+  console.log('GET '+url);
+  xmlhttp.open('GET', url, true);
+//  keys='';
+  xmlhttp.send(null);
+
+COBI.battery.state.read(function(response, timestamp) {
+  console.log('response='+response);
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+      console.log('XMLHttpRequest2.DONE');
+    }
+  }
+  var url=document.URL+'?response='+JSON.stringify(response);
+  console.log('GET2 '+url);
+  xmlhttp.open('GET', url, true);
+  xmlhttp.send(null);
+});
+
 });
 
 // Define id, name, events, formatting functions, units and default value for each item
@@ -105,6 +138,15 @@ var definitions = [
     unsubscribe: COBI.tourService.ridingDuration.unsubscribe,
     formatter: formatMins,
     unit: 'min',
+    defaultValue: '-'
+  },
+  {
+    id: 'battery',
+    name: 'Battery',
+    subscribe: COBI.battery.state.subscribe,
+    unsubscribe: COBI.battery.state.unsubscribe,
+    formatter: formatBattery,
+    unit: '%',
     defaultValue: '-'
   }
 ];

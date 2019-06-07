@@ -11,7 +11,8 @@ var defaultOrderedList = [
   'ascent',
   'calories',
   'distance',
-  'duration'
+  'duration',
+  'battery'
 ];
 
 var defaultZoomIndex = 3;
@@ -121,6 +122,7 @@ function restoreGrid() {
   clearGrid();
   for (var i = 0; i < orderedList.length; i++) {
     var definition = definitionForId(orderedList[i]);
+console.log(i+".definition.name="+definition.name);
     createGridItem(definition);
     updateGridItemWith(definition, definition.defaultValue);
     subscribeGridItemWith(definition);

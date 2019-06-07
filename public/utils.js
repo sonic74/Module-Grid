@@ -40,6 +40,13 @@ function formatMins(value) {
   return min;
 }
 
+var batteryLevel;
+function formatBattery(value) {
+console.log("formatBattery("+value);
+  batteryLevel=value.batteryLevel
+  return batteryLevel;
+}
+
 function enforceDot1(stringValue) {
   return stringValue.indexOf('.') == -1 ? stringValue + '.0' : stringValue;
 }

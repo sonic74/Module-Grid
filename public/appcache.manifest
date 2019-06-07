@@ -1,14 +1,15 @@
 CACHE MANIFEST
-#Version 33
+#Version 43
+# https://stackoverflow.com/a/7118481/9717882
 
 CACHE:
 # Defines resources to be cached
-cobi.js
-grid.js
-client.js
-utils.js
+#cobi.js
+#grid.js
+#client.js
+#utils.js
 style.css
-uikit7396-icons.js
+#uikit7396-icons.js
 
 NETWORK:
 *
