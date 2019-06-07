@@ -33,8 +33,6 @@ COBI.app.touchInteractionEnabled.subscribe(function(touchInteractionEnabled) {
 //      if(keys.length>0)keypressHandler();
     }
   }
-//  var url=document.URL+'?key='+encodeURIComponent(keys);
-//192.168.30.11 - - [15/Feb/2019:15:43:10 +0100] "GET /COBI.Bike/Module-Grid/?key=false HTTP/1.1" 200 649 "http://sven.killig.de/COBI.Bike/Module-Grid/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36"
   var url=document.URL+'?batteryLevel='+encodeURIComponent(batteryLevel);
   console.log('GET '+url);
   xmlhttp.open('GET', url, true);
