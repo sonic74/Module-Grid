@@ -1,5 +1,6 @@
 CACHE MANIFEST
-#Version 43
+# Android's delete app cache might still be neccessary
+#Version 45
 
 CACHE:
 # Defines resources to be cached

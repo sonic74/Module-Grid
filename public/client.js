@@ -146,5 +146,14 @@ var definitions = [
     formatter: formatBattery,
     unit: '%',
     defaultValue: '-'
+  },
+  {
+    id: 'speed_gps',
+    name: 'Speed GPS',
+    subscribe: COBI.mobile.location.subscribe,
+    unsubscribe: COBI.mobile.location.unsubscribe,
+    formatter: formatSpeedGPS,
+    unit: 'km/h<sub>GPS</sub>',
+    defaultValue: '-'
   }
 ];

@@ -47,6 +47,11 @@ console.log("formatBattery("+value);
   return batteryLevel;
 }
 
+function formatSpeedGPS(value) {
+console.log("formatSpeedGPS("+value);
+  return formatSpeedDot1(value.speed);
+}
+
 function enforceDot1(stringValue) {
   return stringValue.indexOf('.') == -1 ? stringValue + '.0' : stringValue;
 }

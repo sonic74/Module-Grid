@@ -12,7 +12,8 @@ var defaultOrderedList = [
   'calories',
   'distance',
   'duration',
-  'battery'
+  'battery',
+  'speed_gps'
 ];
 
 var defaultZoomIndex = 3;
