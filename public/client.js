@@ -149,11 +149,20 @@ var definitions = [
   },
   {
     id: 'speed_gps',
-    name: 'Speed GPS',
+    name: 'GPS Speed',
     subscribe: COBI.mobile.location.subscribe,
     unsubscribe: COBI.mobile.location.unsubscribe,
     formatter: formatSpeedGPS,
     unit: 'km/h<sub>GPS</sub>',
+    defaultValue: '-'
+  },
+  {
+    id: 'ambient_light',
+    name: 'Ambient Light',
+    subscribe: COBI.hub.ambientLightState.subscribe,
+    unsubscribe: COBI.hub.ambientLightState.unsubscribe,
+    formatter: formatAmbientLightState,
+    unit: 'state',
     defaultValue: '-'
   }
 ];

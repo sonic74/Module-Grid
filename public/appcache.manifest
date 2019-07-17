@@ -1,13 +1,13 @@
 CACHE MANIFEST
-# Android's delete app cache might still be neccessary
-#Version 45
+# Android's "delete app cache" might still be neccessary
+#Version 48
 
 CACHE:
 # Defines resources to be cached
-#cobi.js
-#grid.js
-#client.js
-#utils.js
+cobi.js
+grid.js
+client.js
+utils.js
 style.css
 #uikit7396-icons.js
 

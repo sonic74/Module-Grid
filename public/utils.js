@@ -52,6 +52,11 @@ console.log("formatSpeedGPS("+value);
   return formatSpeedDot1(value.speed);
 }
 
+function formatAmbientLightState(value) {
+console.log("formatAmbientLightState("+value);
+  return value.toLowerCase();
+}
+
 function enforceDot1(stringValue) {
   return stringValue.indexOf('.') == -1 ? stringValue + '.0' : stringValue;
 }

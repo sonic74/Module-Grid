@@ -13,7 +13,8 @@ var defaultOrderedList = [
   'distance',
   'duration',
   'battery',
-  'speed_gps'
+  'speed_gps',
+  'ambient_light'
 ];
 
 var defaultZoomIndex = 3;
