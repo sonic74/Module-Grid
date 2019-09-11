@@ -164,5 +164,14 @@ var definitions = [
     formatter: formatAmbientLightState,
     unit: 'state',
     defaultValue: '-'
+  },
+  {
+    id: 'ant',
+    name: 'ANT+',
+    subscribe: ANTsubscribe,
+    unsubscribe: ANTunsubscribe,
+    formatter: formatAmbientLightState,
+    unit: '',
+    defaultValue: '-'
   }
 ];

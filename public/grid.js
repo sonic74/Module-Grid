@@ -14,7 +14,8 @@ var defaultOrderedList = [
   'duration',
   'battery',
   'speed_gps',
-  'ambient_light'
+  'ambient_light',
+  'ant'
 ];
 
 var defaultZoomIndex = 3;
